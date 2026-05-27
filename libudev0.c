@@ -45,13 +45,6 @@ struct udev_list_entry *udev_queue_get_failed_list_entry(_unused_ struct udev_qu
 _public_
 struct udev_monitor *udev_monitor_new_from_socket(struct udev *a, const char *b)
 {
-    /* Check for invalid arguments first to prevent unexpected behavior */
-    if (!a || !b) {
-        errno = EINVAL;
-        return NULL;
-    }
-
-    /* Not implemented yet */
     errno = ENOSYS;
     return NULL;
 }
